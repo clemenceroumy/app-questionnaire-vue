@@ -2,30 +2,11 @@
  [App questionnaire](https://clever-mcnulty-ae4f6c.netlify.com)
 
 
-## Project setup
-```
-npm install
-```
+# Planning
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Mercredi 23 Octobre
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [x] Déploiement sur Netlify 
+- [x] Interface page Home
+- [ ] Composant Question
+- [ ] Interface page Question
