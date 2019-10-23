@@ -29,7 +29,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn class="mx-auto">
+            <v-btn class="mx-auto" to="survey">
               <h5>Commencer le test</h5>
             </v-btn>
           </v-card-actions>
