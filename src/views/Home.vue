@@ -1,18 +1,54 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-row no-gutters justify="center">
+      <v-col
+        cols="12"
+        sm="6"
+      >
+        <v-card class="ma-5 pa-2">
+          <v-card-title>
+            <h1 class="headline mx-auto">Connexion</h1>
+          </v-card-title>
+
+          <v-card-text>
+            <v-row justify="center">
+              <v-col cols="10">
+                <!-- FIRSTNAME -->
+                <v-text-field label="Prénom" v-model="firstName">
+                </v-text-field>
+
+                <!-- LASTNAME -->
+                <v-text-field label="Nom" v-model="lastName">
+                </v-text-field>
+
+                <!-- COMPANY -->
+                <v-text-field label="Entreprise" v-model="company">
+                </v-text-field>
+              </v-col>
+            </v-row>
+          </v-card-text>
+
+          <v-card-actions>
+            <v-btn class="mx-auto">
+              <h5>Commencer le test</h5>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      firstName: '',
+      lastName: '',
+      company: ''
+    }
   }
 }
 </script>
