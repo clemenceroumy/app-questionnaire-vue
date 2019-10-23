@@ -8,5 +8,6 @@
 
 - [x] Déploiement sur Netlify 
 - [x] Interface page Home
-- [ ] Composant Question
-- [ ] Interface page Questionnaire
+- [x] Composant Question
+- [x] Interface page Questionnaire
+- [ ] Importer PouchDB
