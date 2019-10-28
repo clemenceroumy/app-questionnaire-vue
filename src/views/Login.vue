@@ -5,31 +5,31 @@
         cols="12"
         sm="6"
       >
-        <v-card class="ma-5 pa-2">
+        <v-card class="ma-5 pa-2" color="#282d49">
           <v-card-title>
-            <h1 class="headline mx-auto">Connexion</h1>
+            <h1 class="headline mx-auto white--text">Connexion</h1>
           </v-card-title>
 
           <v-card-text>
             <v-row justify="center">
               <v-col cols="10">
                 <!-- FIRSTNAME -->
-                <v-text-field label="Prénom" v-model="firstName">
+                <v-text-field dark label="Prénom" v-model="firstName">
                 </v-text-field>
 
                 <!-- LASTNAME -->
-                <v-text-field label="Nom" v-model="lastName">
+                <v-text-field dark label="Nom" v-model="lastName">
                 </v-text-field>
 
                 <!-- COMPANY -->
-                <v-text-field label="Entreprise" v-model="company">
+                <v-text-field dark label="Entreprise" v-model="company">
                 </v-text-field>
               </v-col>
             </v-row>
           </v-card-text>
 
           <v-card-actions>
-            <v-btn @click="login" class="mx-auto">
+            <v-btn dark color="#0ec4cf" @click="login" class="mx-auto pa-5">
               <h5>Commencer le test</h5>
             </v-btn>
           </v-card-actions>

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="background-color: #181b33">
     <v-content>
       <v-slide-y-transition mode="out-in">
         <router-view/>
