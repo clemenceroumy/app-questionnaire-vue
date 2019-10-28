@@ -5,8 +5,6 @@
     </v-card-title>
 
     <v-card-text>
-      {{answers}}
-      {{question.correctAnswer}}
 
       <v-list>
         <v-list-item v-for="(answer,index) in question.answers" :key="index">

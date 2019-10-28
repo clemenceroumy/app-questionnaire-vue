@@ -11,8 +11,6 @@
           <h1 class="mx-auto">Questionnaire</h1>
         </v-row>
 
-        {{`score: ${score}/10`}}
-
         <Question :question="questions[counter - 1]"
                   :text="counter < 10 ? 'Suivant' : 'Resultat'"
                   v-on:answerToQuestion="getAnswerFromChild"
