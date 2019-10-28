@@ -1,11 +1,12 @@
-import Home from '../views/Home.vue'
+import Home from '../views/Login.vue'
 import Survey from '../views/Survey'
+import Login from '../views/Login'
 
 export default [
   {
     path: '/',
-    name: 'home',
-    component: Home,
+    name: 'login',
+    component: Login,
   },
   {
     path: '/survey',

@@ -45,7 +45,7 @@ import PouchDB from 'pouchdb'
 var db = new PouchDB('my_database')
 
 export default {
-  name: 'home',
+  name: 'login',
   data () {
     return {
       firstName: '',
