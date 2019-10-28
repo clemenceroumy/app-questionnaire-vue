@@ -62,6 +62,12 @@ export default {
       company: ''
     }
   },
+  created(){
+    db.put({
+      _id: 'admin',
+      password: 'admin'
+    })
+  },
   methods: {
     login () {
       db.put({

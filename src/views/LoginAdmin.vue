@@ -14,13 +14,10 @@
           <v-card-text>
             <v-row justify="center">
               <v-col cols="10">
-                <!-- FIRSTNAME -->
-                <v-text-field label="Prénom" v-model="firstName">
-                </v-text-field>
 
-                <!-- LASTNAME -->
-                <v-text-field label="Nom" v-model="lastName">
-                </v-text-field>
+                <v-alert type="error" v-if="errorLogin !== ''">
+                  {{errorLogin}}
+                </v-alert>
 
                 <!-- COMPANY -->
                 <v-text-field label="Entreprise" v-model="company">
@@ -46,6 +43,9 @@
 </template>
 
 <script>
+  import PouchDB from 'pouchdb'
+  var db = new PouchDB('my_database')
+
   export default {
     name: 'LoginAdmin',
     data(){
@@ -53,7 +53,24 @@
         firstName: "",
         lastName: '',
         company: '',
-        password: ''
+        password: '',
+        errorLogin: ''
+      }
+    },
+    methods: {
+      login(){
+        db.get('admin').then(admin => {
+          if(admin.password === this.password){
+            db.put({
+              _id: 'admin',
+              _rev: admin._rev,
+              company: this.company,
+              password: admin.password
+            }).then(() => this.$router.push('/dashboard'))
+          }else{
+            this.errorLogin = "Mot de passe incorrect"
+          }
+        })
       }
     }
   }
