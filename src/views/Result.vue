@@ -14,10 +14,9 @@
             </v-card-text>
 
             <v-card-actions>
-              <v-btn class="mx-auto">Fin</v-btn>
+              <v-btn @click="disconnect" class="mx-auto">Fin</v-btn>
             </v-card-actions>
           </v-card>
-
 
       </v-col>
     </v-row>
@@ -37,6 +36,11 @@
     },
     created () {
       db.get('user').then(user => this.user = user).catch(e => console.log(e))
+    },
+    methods:{
+      disconnect(){
+        db.get('user').then(doc => db.remove(doc).then(() => this.$router.push('/'))).catch(e => console.log(e))
+      }
     }
   }
 </script>
