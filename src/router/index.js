@@ -1,25 +1,42 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Survey from '../views/Survey'
+import Router from 'vue-router'
+import routes from "./routes";
 
-Vue.use(VueRouter)
+import PouchDB from 'pouchdb'
+var db = new PouchDB('my_database')
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home
-  },
-  {
-    path: '/survey',
-    name: 'survey',
-    component: Survey
+Vue.use(Router);
+
+let router = new Router({
+  routes: routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return {x: 0, y: 0}
+    }
   }
-]
+});
 
-const router = new VueRouter({
-  routes
-})
+router.beforeEach((to, from, next) => handleRoute(to, from, next));
+
+let handleRoute = (to, from, next) => {
+  let user
+
+  db.get('user').then((value) => user = value).catch((e) => {
+    user = null;
+  }).finally(() => {
+    if (to.meta !== undefined) {
+      if (user === null && to.meta.secure) {
+        // User not loggedin
+        next({path: '/', replace: true});
+      } else {
+        next();
+      }
+    } else {
+      next();
+    }
+  })
+};
 
 export default router

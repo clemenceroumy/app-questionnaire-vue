@@ -18,7 +18,7 @@
 
 - [x] Importer PouchDB
 - [x] Connecter un utilisateur
-- [ ] Bloquer les routes si l'utilisateur n'est pas connecté
+- [x] Bloquer les routes si l'utilisateur n'est pas connecté
 - [ ] Créer le JSON contenant les questions
 - [ ] Afficher les questions sur des écrans différents
 - [ ] Afficher les questions / réponses récupérées depuis le JSON
