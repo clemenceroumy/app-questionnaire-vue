@@ -24,6 +24,7 @@
 - [x] Afficher les questions / réponses récupérées depuis le JSON
 - [x] Calculer et afficher le résultat de l'utilisateur
 - [x] Enregistrer le résultat dans PouchDB
+- [x] Page Result UI
 - [ ] Déconnexion de l'utilisateur à la fin du questionnaire
 
 #### Après-midi
