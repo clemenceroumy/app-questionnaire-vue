@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <v-row no-gutters justify="center">
       <v-col
         cols="12"
@@ -7,7 +7,8 @@
       >
         <v-card class="ma-5 pa-2">
           <v-card-title>
-            <h1 class="headline mx-auto">Connexion</h1>
+            <a @click="$router.go(-1)">Annuler</a>
+            <h1 class="headline mx-auto">Connexion Administrateur</h1>
           </v-card-title>
 
           <v-card-text>
@@ -24,23 +25,18 @@
                 <!-- COMPANY -->
                 <v-text-field label="Entreprise" v-model="company">
                 </v-text-field>
+
+                <!-- PASSWORD -->
+                <v-text-field label="Mot de passe" v-model="password">
+                </v-text-field>
               </v-col>
             </v-row>
           </v-card-text>
 
           <v-card-actions>
-            <v-col sm12>
-              <v-row class="pa-5">
-                <v-btn @click="login" class="mx-auto">
-                  <h5>Commencer le test</h5>
-                </v-btn>
-              </v-row>
-
-              <v-row justify="center">
-                <router-link to="/loginAdmin">Administrateur ?</router-link>
-              </v-row>
-            </v-col>
-
+            <v-btn @click="login" class="mx-auto">
+              <h5>Connexion</h5>
+            </v-btn>
           </v-card-actions>
         </v-card>
 
@@ -50,27 +46,15 @@
 </template>
 
 <script>
-import PouchDB from 'pouchdb'
-var db = new PouchDB('my_database')
-
-export default {
-  name: 'login',
-  data () {
-    return {
-      firstName: '',
-      lastName: '',
-      company: ''
-    }
-  },
-  methods: {
-    login () {
-      db.put({
-        _id: 'user',
-        firstName: this.firstName,
-        lastName: this.lastName,
-        company: this.company
-      }).then(() => this.$router.push('/survey')).catch(e => console.log(e))
+  export default {
+    name: 'LoginAdmin',
+    data(){
+      return {
+        firstName: "",
+        lastName: '',
+        company: '',
+        password: ''
+      }
     }
   }
-}
 </script>

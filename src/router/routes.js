@@ -2,12 +2,18 @@ import Home from '../views/Login.vue'
 import Survey from '../views/Survey'
 import Login from '../views/Login'
 import Result from '../views/Result'
+import LoginAdmin from '../views/LoginAdmin'
 
 export default [
   {
     path: '/',
     name: 'login',
     component: Login,
+  },
+  {
+    path: '/loginAdmin',
+    name: 'loginAdmin',
+    component: LoginAdmin,
   },
   {
     path: '/survey',
