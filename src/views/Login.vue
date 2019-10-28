@@ -29,9 +29,17 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn dark color="#0ec4cf" @click="login" class="mx-auto pa-5">
+            <v-col sm12>
+              <v-row class="pa-5">
+                <v-btn dark color="#0ec4cf" @click="login" class="mx-auto pa-5">
               <h5>Commencer le test</h5>
             </v-btn>
+              </v-row>
+
+              <v-row justify="center">
+                <router-link to="/loginAdmin">Administrateur ?</router-link>
+              </v-row>
+            </v-col>
           </v-card-actions>
         </v-card>
 
@@ -52,6 +60,12 @@ export default {
       lastName: '',
       company: ''
     }
+  },
+  created(){
+    db.put({
+      _id: 'admin',
+      password: 'admin'
+    })
   },
   methods: {
     login () {

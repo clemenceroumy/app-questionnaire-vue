@@ -27,7 +27,7 @@ let handleRoute = (to, from, next) => {
     user = null;
   }).finally(() => {
     if (to.meta !== undefined) {
-      if (user === null && to.meta.secure) {
+      if (user === null && to.meta.secure && !to.meta.admin) {
         // User not loggedin
         next({path: '/', replace: true});
       } else {

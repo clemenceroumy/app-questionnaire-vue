@@ -29,7 +29,9 @@
 
 #### Après-midi
 
-- [ ] Compte administrateur
+- [x] Page login administrateur
+- [x] Compte administrateur
+- [ ] Enregistrer les données en BDD
 - [ ] Page Dashboard UI
 - [ ] Résultats des utilisateurs de l'entreprise
 - [ ] Page détail résultat
