@@ -31,6 +31,7 @@
 
 - [x] Page login administrateur
 - [x] Compte administrateur
+- [x] Améliorer l'UI de toutes les pages
 - [ ] Enregistrer les données en BDD
 - [ ] Page Dashboard UI
 - [ ] Résultats des utilisateurs de l'entreprise
