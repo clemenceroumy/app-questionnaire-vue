@@ -37,6 +37,8 @@
 <script>
 import Question from '../components/Question'
 import PouchDB from 'pouchdb'
+import data from '../statics/questions'
+
 var db = new PouchDB('my_database')
 
 export default {
@@ -49,6 +51,7 @@ export default {
   },
   created () {
     db.get('user').then(user => this.user = user)
+    console.log(data.questions)
   }
 }
 </script>
