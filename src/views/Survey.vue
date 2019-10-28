@@ -4,6 +4,10 @@
       <v-col cols="12" sm="8">
 
         <v-row>
+          <p>{{`${user.firstName} ${user.lastName}`}}</p>
+        </v-row>
+
+        <v-row>
           <h1 class="mx-auto">Questionnaire</h1>
         </v-row>
 
@@ -32,9 +36,19 @@
 
 <script>
 import Question from '../components/Question'
+import PouchDB from 'pouchdb'
+var db = new PouchDB('my_database')
 
 export default {
   name: 'Survey',
-  components: { Question }
+  components: { Question },
+  data() {
+    return {
+      user: ''
+    }
+  },
+  created () {
+    db.get('user').then(user => this.user = user)
+  }
 }
 </script>

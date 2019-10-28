@@ -29,7 +29,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn class="mx-auto" to="survey">
+            <v-btn @click="login" class="mx-auto">
               <h5>Commencer le test</h5>
             </v-btn>
           </v-card-actions>
@@ -41,6 +41,9 @@
 </template>
 
 <script>
+import PouchDB from 'pouchdb'
+var db = new PouchDB('my_database')
+
 export default {
   name: 'home',
   data () {
@@ -48,6 +51,16 @@ export default {
       firstName: '',
       lastName: '',
       company: ''
+    }
+  },
+  methods: {
+    login () {
+      db.put({
+        _id: 'user',
+        firstName: this.firstName,
+        lastName: this.lastName,
+        company: this.company
+      }).then(() => this.$router.push('/survey')).catch(e => console.log(e))
     }
   }
 }
