@@ -3,19 +3,41 @@
     <v-row justify="center">
       <v-col cols="12" sm="8">
 
-        <v-row>
-          <p>{{`${user.firstName} ${user.lastName}`}}</p>
-        </v-row>
+        <v-card color="#282d49">
+          <v-card-title>
+            <v-col cols="12">
+              <v-row align="space-between" class="pa-2">
+                <v-col cols="8">
+                  <v-row align="center">
+                    <v-avatar color="#0ec4cf" size="28">
+                      <v-icon size="12" dark>mdi-account</v-icon>
+                    </v-avatar>
 
-        <v-row>
-          <h1 class="mx-auto">Questionnaire</h1>
-        </v-row>
+                    <h5 class="px-2 white--text">{{`${user.firstName} ${user.lastName}`}}</h5>
+                  </v-row>
+                </v-col>
 
-        <Question :question="questions[counter - 1]"
-                  :text="counter < 10 ? 'Suivant' : 'Resultat'"
-                  v-on:answerToQuestion="getAnswerFromChild"
-                  v-on:updateCounter="(value) => counter = value"
-        />
+                <v-col cols="4">
+                  <v-row justify="end">
+                    <h5 class="white--text">{{`Question ${counter} sur 10`}}</h5>
+                  </v-row>
+                </v-col>
+              </v-row>
+
+              <v-row>
+                <v-divider dark></v-divider>
+              </v-row>
+            </v-col>
+          </v-card-title>
+
+          <v-card-text>
+            <Question :question="questions[counter - 1]"
+                      :text="counter < 10 ? 'Suivant' : 'Resultat'"
+                      v-on:answerToQuestion="getAnswerFromChild"
+                      v-on:updateCounter="(value) => counter = value"
+            />
+          </v-card-text>
+        </v-card>
 
       </v-col>
     </v-row>

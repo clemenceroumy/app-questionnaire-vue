@@ -1,26 +1,41 @@
 <template>
-  <v-card>
+  <v-card elevation="0" color="#282d49">
     <v-card-title>
-      <h2>{{`${question.id} - ${question.question}`}}</h2>
+      <v-col cols="12">
+        <v-row justify="center">
+          <h4 class="white--text">{{`${question.id}) ${question.question}`}}</h4>
+        </v-row>
+      </v-col>
     </v-card-title>
 
     <v-card-text>
+      <v-col cols="12">
+        <v-list color="#282d49">
+          <v-list-item v-for="(answer,index) in question.answers" :key="index">
+            <v-row class="ma-2" style="border: 1px solid #595d7f;">
+              <v-checkbox
+                class="mx-3"
+                dark
+                color="#0ec4cf"
+                v-model="answers"
+                :label="answer.answer.toString()"
+                :value="answer.id"
+              ></v-checkbox>
+            </v-row>
+          </v-list-item>
+        </v-list>
+      </v-col>
 
-      <v-list>
-        <v-list-item v-for="(answer,index) in question.answers" :key="index">
-          <v-checkbox
-            v-model="answers"
-            :label="answer.answer.toString()"
-            :value="answer.id"
-          ></v-checkbox>
-        </v-list-item>
-      </v-list>
     </v-card-text>
 
     <v-card-actions>
-      <v-btn @click="emitAnswer">
-        {{text}}
-      </v-btn>
+      <v-col cols="12" sm="11">
+        <v-row justify="end">
+          <v-btn class="pa-5" dark color="#0ec4cf" @click="emitAnswer">
+            {{text}}
+          </v-btn>
+        </v-row>
+      </v-col>
     </v-card-actions>
   </v-card>
 </template>
