@@ -20,9 +20,10 @@
 - [x] Connecter un utilisateur
 - [x] Bloquer les routes si l'utilisateur n'est pas connecté
 - [x] Créer le JSON contenant les questions
-- [ ] Afficher les questions sur des écrans différents
-- [ ] Afficher les questions / réponses récupérées depuis le JSON
+- [x] Afficher les questions sur des écrans différents
+- [x] Afficher les questions / réponses récupérées depuis le JSON
 - [ ] Calculer et afficher le résultat de l'utilisateur
+- [ ] Enregistrer le résultat dans PouchDB
 - [ ] Déconnexion de l'utilisateur à la fin du questionnaire
 
 #### Après-midi

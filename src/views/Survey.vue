@@ -11,22 +11,7 @@
           <h1 class="mx-auto">Questionnaire</h1>
         </v-row>
 
-        <v-list color="transparent">
-          <v-list-item :key="n" v-for="n in 10">
-            <v-row justify="center">
-              <v-col cols="12">
-                <Question :number="n" />
-              </v-col>
-            </v-row>
-          </v-list-item>
-
-        </v-list>
-
-        <v-row>
-            <v-btn class="mx-auto">
-              <h5>Confirmer</h5>
-            </v-btn>
-        </v-row>
+        <Question :question="questions[counter - 1]" :text="counter < 10 ? 'Suivant' : 'Resultat'" :action="() => counter < 10 ? counter++ : this.$router.push('/result')"/>
 
       </v-col>
     </v-row>
@@ -46,12 +31,13 @@ export default {
   components: { Question },
   data() {
     return {
-      user: ''
+      user: '',
+      counter: 1,
+      questions: data.questions,
     }
   },
   created () {
     db.get('user').then(user => this.user = user)
-    console.log(data.questions)
   }
 }
 </script>
