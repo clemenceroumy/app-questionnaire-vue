@@ -5,10 +5,17 @@
         cols="12"
         sm="6"
       >
-        <v-card class="ma-5 pa-2">
+        <v-card class="ma-5 pa-2"  color="#282d49">
           <v-card-title>
-            <a @click="$router.go(-1)">Annuler</a>
-            <h1 class="headline mx-auto">Connexion Administrateur</h1>
+            <v-col cols="12">
+              <v-row>
+                <a style="font-size: 14px; color: #0ec4cf" @click="$router.go(-1)">Annuler</a>
+              </v-row>
+
+              <v-row justify="center">
+                <h1 class="headline mx-auto white--text">Connexion Administrateur</h1>
+              </v-row>
+            </v-col>
           </v-card-title>
 
           <v-card-text>
@@ -20,18 +27,18 @@
                 </v-alert>
 
                 <!-- COMPANY -->
-                <v-text-field label="Entreprise" v-model="company">
+                <v-text-field dark label="Entreprise" v-model="company">
                 </v-text-field>
 
                 <!-- PASSWORD -->
-                <v-text-field label="Mot de passe" v-model="password">
+                <v-text-field dark label="Mot de passe" v-model="password">
                 </v-text-field>
               </v-col>
             </v-row>
           </v-card-text>
 
           <v-card-actions>
-            <v-btn @click="login" class="mx-auto">
+            <v-btn dark color="#0ec4cf" @click="login" class="mx-auto pa-5">
               <h5>Connexion</h5>
             </v-btn>
           </v-card-actions>

@@ -32,12 +32,12 @@
             <v-col sm12>
               <v-row class="pa-5">
                 <v-btn dark color="#0ec4cf" @click="login" class="mx-auto pa-5">
-              <h5>Commencer le test</h5>
-            </v-btn>
+                  <h5>Commencer le test</h5>
+                </v-btn>
               </v-row>
 
               <v-row justify="center">
-                <router-link to="/loginAdmin">Administrateur ?</router-link>
+                <router-link to="/loginAdmin" style="color: #0ec4cf; text-decoration: none">Administrateur ?</router-link>
               </v-row>
             </v-col>
           </v-card-actions>
