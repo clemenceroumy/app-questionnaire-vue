@@ -22,8 +22,8 @@
 - [x] Créer le JSON contenant les questions
 - [x] Afficher les questions sur des écrans différents
 - [x] Afficher les questions / réponses récupérées depuis le JSON
-- [ ] Calculer et afficher le résultat de l'utilisateur
-- [ ] Enregistrer le résultat dans PouchDB
+- [x] Calculer et afficher le résultat de l'utilisateur
+- [x] Enregistrer le résultat dans PouchDB
 - [ ] Déconnexion de l'utilisateur à la fin du questionnaire
 
 #### Après-midi

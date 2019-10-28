@@ -11,7 +11,13 @@
           <h1 class="mx-auto">Questionnaire</h1>
         </v-row>
 
-        <Question :question="questions[counter - 1]" :text="counter < 10 ? 'Suivant' : 'Resultat'" :action="() => counter < 10 ? counter++ : this.$router.push('/result')"/>
+        {{`score: ${score}/10`}}
+
+        <Question :question="questions[counter - 1]"
+                  :text="counter < 10 ? 'Suivant' : 'Resultat'"
+                  v-on:answerToQuestion="getAnswerFromChild"
+                  v-on:updateCounter="(value) => counter = value"
+        />
 
       </v-col>
     </v-row>
@@ -34,10 +40,49 @@ export default {
       user: '',
       counter: 1,
       questions: data.questions,
+      answers: [],
+      score: 0
     }
   },
   created () {
     db.get('user').then(user => this.user = user)
+  },
+  methods: {
+    getAnswerFromChild(value){
+
+      this.updateScore(value)
+
+      if(this.counter === 10){
+
+
+        db.get('user').then(doc => {
+          db.put({
+            _id: 'user',
+            _rev: doc._rev,
+            firstName: doc.firstName,
+            lastName: doc.lastName,
+            company: doc.company,
+            score: this.score
+          }).then(() => this.$router.push('/result')).catch(e => console.log(e))
+        })
+          .catch(function (err) {
+          console.log(err);
+        })
+      }
+    },
+
+    updateScore(value){
+      let conditionEach = value.every(answer => {
+          return this.questions[this.counter - 1].correctAnswer.includes(answer)
+        }
+      );
+
+      let conditionSize = this.questions[this.counter - 1].correctAnswer.length === value.length;
+
+      if(conditionEach && conditionSize){
+        this.score++;
+      }
+    }
   }
 }
 </script>

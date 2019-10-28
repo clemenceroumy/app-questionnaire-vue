@@ -18,7 +18,7 @@
           "answer": 4
         }
       ],
-      "correctAnswer": 1
+      "correctAnswer": [2,1]
     },
     {
       "id": 2,
@@ -37,7 +37,7 @@
           "id": 4,
           "answer": 4
         }
-      ], "correctAnswer": 1
+      ], "correctAnswer":  [3,2]
     },
     {
       "id": 3,
@@ -56,7 +56,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [1,4]
     },
     {
       "id": 4,
@@ -75,7 +75,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [4,2]
     },
     {
       "id": 5,
@@ -94,7 +94,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [3,4]
     },
     {
       "id": 6,
@@ -113,7 +113,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [1,2]
     },
     {
       "id": 7,
@@ -132,7 +132,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [1,2]
     },
     {
       "id": 8,
@@ -151,7 +151,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [1,2]
     },
     {
       "id": 9,
@@ -170,7 +170,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [1,2]
     },
     {
       "id": 10,
@@ -189,7 +189,7 @@
           "id": 4,
           "answer": 4
         }
-      ],"correctAnswer": 1
+      ],"correctAnswer":  [4,2]
     }
   ]
 }
