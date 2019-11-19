@@ -63,21 +63,37 @@ export default {
   },
   created(){
     //SET PASSWORD FOR ADMIN USER (WHEN APP IS LAUNCHED)
-    db.put({
-      _id: 'admin',
-      password: 'admin'
+    db.get('admin').then(doc => {
+      db.put({
+        _id: 'admin',
+        _rev: doc._rev,
+        password: 'admin'
+      })
+    }).catch(e => {
+      db.put({
+        _id: 'admin',
+        password: 'admin'
+      })
     })
   },
   methods: {
     login () {
       //SAVE USER TO LOCAL POUCHDB
+      db.get('user')
+        .then(doc => {
+          doc.firstName = this.firstName
+          doc.lastName = this.lastName
+          doc.company =  this.company
+          return db.put(doc)
+          .then(() => this.$router.push('/survey')).catch(e => console.log(e))
+        }).catch(e => {
           db.put({
-            _id: 'user',
+            _id: "user",
             firstName: this.firstName,
             lastName: this.lastName,
-            company: this.company,
-          }).then(() => this.$router.push('/survey')).catch(e => console.log(e)
-      )
+            company: this.company
+          })
+      })
     }
   }
 }
