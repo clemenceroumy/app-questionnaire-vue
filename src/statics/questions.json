@@ -2,156 +2,156 @@
   "questions": [
     {
       "id": 1,
-      "question": "La bonne réponse est 1 ?",
+      "question": "Quelles propositions correspondent à des types primitifs en JavaScript ?",
       "answers": [
         {
           "id": 1,
-          "answer": 1
+          "answer": "String"
         },{
           "id": 2,
-          "answer": 2
+          "answer": "Array"
         },{
           "id": 3,
-          "answer": 3
+          "answer": "Number"
         },{
           "id": 4,
-          "answer": 4
+          "answer": "Class"
         }
       ],
-      "correctAnswer": [2,1]
+      "correctAnswer": [1,3]
     },
     {
       "id": 2,
-      "question": "La bonne réponse est 1 ?",
+      "question": "Quelles phrases ci-dessous sont vraies au sujet des constantes ?",
       "answers": [
         {
           "id": 1,
-          "answer": 1
+          "answer": "Une fois déclarées, leur valeur ne peut être modifiée."
         },{
           "id": 2,
-          "answer": 2
+          "answer": "On peut déclarer une constante sans l'initialiser."
         },{
           "id": 3,
-          "answer": 3
+          "answer": "Elles peuvent être utiles pour éviter les erreurs et comportements inattendus."
         },{
           "id": 4,
-          "answer": 4
+          "answer": "Leur type peut être modifié après déclaration."
         }
-      ], "correctAnswer":  [3,2]
+      ], "correctAnswer":  [1,3]
     },
     {
       "id": 3,
-      "question": "La bonne réponse est 1 ?",
+      "question": "Comment charge-t-on une bibliothèque avec Node.js ?",
       "answers": [
         {
           "id": 1,
-          "answer": 1
+          "answer": "require()"
         },{
           "id": 2,
-          "answer": 2
+          "answer": "load()"
         },{
           "id": 3,
-          "answer": 3
+          "answer": "loadLibrary()"
         },{
           "id": 4,
-          "answer": 4
+          "answer": "include()"
+        }
+      ],"correctAnswer":  [1]
+    },
+    {
+      "id": 4,
+      "question": "Le modèle, dans Django, permet les actions suivantes :",
+      "answers": [
+        {
+          "id": 1,
+          "answer": "Interagir avec une base de données."
+        },{
+          "id": 2,
+          "answer": "Renvoyer une réponse conforme à une requête HTTP."
+        },{
+          "id": 3,
+          "answer": "Créer de nouveaux items dans une base de données."
+        },{
+          "id": 4,
+          "answer": "Chercher des items dans une base de données."
+        }
+      ],"correctAnswer":  [1,3,4]
+    },
+    {
+      "id": 5,
+      "question": "Il est possible de charger le fichier CSS de Bootstrap en passant par un CDN. Quelle affirmation est fausse parmi celles ci-dessous ?",
+      "answers": [
+        {
+          "id": 1,
+          "answer": "Un CDN accélère le chargement."
+        },{
+          "id": 2,
+          "answer": "Un CDN permet de paralléliser les chargements"
+        },{
+          "id": 3,
+          "answer": "Un CDN permet de charger une version personnalisée de Bootstrap."
+        },{
+          "id": 4,
+          "answer": "Un CDN libère les ressources et la bande passante sur son propre serveur."
+        }
+      ],"correctAnswer":  [3]
+    },
+    {
+      "id": 6,
+      "question": "Cochez les affirmations vraies concernant les clés primaires.",
+      "answers": [
+        {
+          "id": 1,
+          "answer": "Une clé primaire permet d'identifier un tuple de manière unique."
+        },{
+          "id": 2,
+          "answer": "Une clé primaire permet d'ouvrir une table."
+        },{
+          "id": 3,
+          "answer": "Une clé primaire est toujours un nombre"
+        },{
+          "id": 4,
+          "answer": "Une clé primaire peut être composée de plusieurs colonnes."
         }
       ],"correctAnswer":  [1,4]
     },
     {
-      "id": 4,
-      "question": "La bonne réponse est 1 ?",
-      "answers": [
-        {
-          "id": 1,
-          "answer": 1
-        },{
-          "id": 2,
-          "answer": 2
-        },{
-          "id": 3,
-          "answer": 3
-        },{
-          "id": 4,
-          "answer": 4
-        }
-      ],"correctAnswer":  [4,2]
-    },
-    {
-      "id": 5,
-      "question": "La bonne réponse est 1 ?",
-      "answers": [
-        {
-          "id": 1,
-          "answer": 1
-        },{
-          "id": 2,
-          "answer": 2
-        },{
-          "id": 3,
-          "answer": 3
-        },{
-          "id": 4,
-          "answer": 4
-        }
-      ],"correctAnswer":  [3,4]
-    },
-    {
-      "id": 6,
-      "question": "La bonne réponse est 1 ?",
-      "answers": [
-        {
-          "id": 1,
-          "answer": 1
-        },{
-          "id": 2,
-          "answer": 2
-        },{
-          "id": 3,
-          "answer": 3
-        },{
-          "id": 4,
-          "answer": 4
-        }
-      ],"correctAnswer":  [1,2]
-    },
-    {
       "id": 7,
-      "question": "La bonne réponse est 1 ?",
+      "question": "Que permet l'héritage en approche orientée objet ?",
       "answers": [
         {
           "id": 1,
-          "answer": 1
+          "answer": "De matérialiser une classe composite, c'est-à-dire le fait qu'une instance de classe est composée d'une ou plusieurs instances d'autres classes"
         },{
           "id": 2,
-          "answer": 2
+          "answer": "De créer une arborescence d'instances d'une même classe"
         },{
           "id": 3,
-          "answer": 3
+          "answer": "De généraliser des comportements et des attributs"
         },{
           "id": 4,
-          "answer": 4
+          "answer": "De représenter les héritiers d'une famille"
         }
-      ],"correctAnswer":  [1,2]
+      ],"correctAnswer":  [2,3]
     },
     {
       "id": 8,
-      "question": "La bonne réponse est 1 ?",
+      "question": "Sélectionnez des technologies concurrentes de PHP",
       "answers": [
         {
           "id": 1,
-          "answer": 1
+          "answer": "Django"
         },{
           "id": 2,
-          "answer": 2
+          "answer": "MYSQL"
         },{
           "id": 3,
-          "answer": 3
+          "answer": "Ruby on rails"
         },{
           "id": 4,
-          "answer": 4
+          "answer": "HTML"
         }
-      ],"correctAnswer":  [1,2]
+      ],"correctAnswer":  [1,3]
     },
     {
       "id": 9,
@@ -159,37 +159,37 @@
       "answers": [
         {
           "id": 1,
-          "answer": 1
+          "answer": "Apache"
         },{
           "id": 2,
-          "answer": 2
+          "answer": "Google Chrome"
         },{
           "id": 3,
-          "answer": 3
+          "answer": "SublimeText"
         },{
           "id": 4,
-          "answer": 4
+          "answer": "PHPStorm"
         }
-      ],"correctAnswer":  [1,2]
+      ],"correctAnswer":  [2,3]
     },
     {
       "id": 10,
-      "question": "La bonne réponse est 1 ?",
+      "question": "Cochez la réponse 2 et 3",
       "answers": [
         {
           "id": 1,
-          "answer": 1
+          "answer": "réponse 3"
         },{
           "id": 2,
-          "answer": 2
+          "answer": "réponse 4"
         },{
           "id": 3,
-          "answer": 3
+          "answer": "réponse 1"
         },{
           "id": 4,
-          "answer": 4
+          "answer": "réponse 2"
         }
-      ],"correctAnswer":  [4,2]
+      ],"correctAnswer":  [2,3]
     }
   ]
 }

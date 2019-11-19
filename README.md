@@ -44,7 +44,7 @@ Pour tester le mode Admin :
 
 
 ### Mardi 19 Novembre
-- [ ] Enregistrer les questions
+- [x] Enregistrer les questions
 - [x] Enregistrer les données en BDD (firebase)
 - [x] Page Dashboard UI
 - [x] Résultats des utilisateurs de l'entreprise
