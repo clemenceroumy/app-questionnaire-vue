@@ -71,15 +71,12 @@ export default {
   methods: {
     login () {
       //SAVE USER TO LOCAL POUCHDB
-      db.get('user').then(doc => {
           db.put({
             _id: 'user',
-            _rev: doc._rev,
             firstName: this.firstName,
             lastName: this.lastName,
             company: this.company,
-          }).then(() => this.$router.push('/survey')).catch(e => console.log(e))
-        }
+          }).then(() => this.$router.push('/survey')).catch(e => console.log(e)
       )
     }
   }
