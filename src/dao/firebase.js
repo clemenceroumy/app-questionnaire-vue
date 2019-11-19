@@ -8,4 +8,15 @@ export default class FirebaseDAO {
       result => console.log("resultat inséré")
     )
   }
+
+  static getResultsAdmin(company){
+    let result = []
+    return firebase.firestore().collection('results').where("company", '==', company).get().then(data => {
+      data.forEach(doc => {
+        result.push(doc.data())
+      });
+
+      return result;
+    })
+  }
 }
