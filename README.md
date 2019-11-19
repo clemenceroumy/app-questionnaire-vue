@@ -40,7 +40,7 @@
 
 ### Mardi 19 Novembre
 - [ ] Enregistrer les questions
-- [ ] Enregistrer les données en BDD
+- [x] Enregistrer les données en BDD (firebase)
 - [ ] Page Dashboard UI
 - [ ] Résultats des utilisateurs de l'entreprise
 - [ ] Page détail résultat

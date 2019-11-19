@@ -25,6 +25,7 @@
 
 <script>
   import PouchDB from 'pouchdb'
+  import FirebaseDAO from '../dao/firebase'
   var db = new PouchDB('my_database')
 
   export default {
@@ -35,11 +36,18 @@
       }
     },
     created () {
+      //HYDRATE USER WITH POUCHDB DATA
       db.get('user').then(user => this.user = user).catch(e => console.log(e))
     },
     methods:{
       disconnect(){
-        db.get('user').then(doc => db.remove(doc).then(() => this.$router.push('/'))).catch(e => console.log(e))
+        db.get('user').then(doc => {
+          //PERSIST DATA INTO FIREBASE DATABASE
+          FirebaseDAO.saveResult(doc)
+
+          //REMOVE USER FROM LOCAL POUCHDB AND REDIRECT TO LOGIN
+          db.remove(doc).then(() => this.$router.push('/'))
+        }).catch(e => console.log(e))
       }
     }
   }
