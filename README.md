@@ -1,5 +1,5 @@
 # app-questionnaire-vue
- Lien vers l'application : [App questionnaire](https://clever-mcnulty-ae4f6c.netlify.com)
+ Lien vers l'application : [App questionnaire](https://clever-mcnulty-ae4f6c.netlify.com/#/)
 
 
 ## Planning
