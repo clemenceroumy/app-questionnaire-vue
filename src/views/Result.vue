@@ -42,7 +42,7 @@
     methods:{
       disconnect(){
         db.get('user').then(doc => {
-          //PERSIST DATA INTO FIREBASE DATABASE
+          //PERSIST SCORE AND USER INTO FIREBASE DATABASE
           FirebaseDAO.saveResult(doc)
 
           //REMOVE USER FROM LOCAL POUCHDB AND REDIRECT TO LOGIN

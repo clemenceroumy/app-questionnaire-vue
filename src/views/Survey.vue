@@ -68,13 +68,15 @@ export default {
     db.get('user').then(user => this.user = user)
   },
   methods: {
+    //ON SUMBIT ANSWER
     getAnswerFromChild(value){
 
       this.updateScore(value)
 
+      //WHILE NUMBER OF QUESTIONS IS INFERIOR TO 10
       if(this.counter === 10){
 
-
+        //UPDATE USER IN POUCHDB WITH HIS SCORE
         db.get('user').then(doc => {
           db.put({
             _id: 'user',
@@ -92,11 +94,13 @@ export default {
     },
 
     updateScore(value){
+      //EACH ANSWER SUBMITED BY USER IS IN THE LIST OF ANSWERS EXPECTED
       let conditionEach = value.every(answer => {
           return this.questions[this.counter - 1].correctAnswer.includes(answer)
         }
       );
 
+      //AS MANY ANSWERS SUBMITED AS ANSWERS EXPECTED
       let conditionSize = this.questions[this.counter - 1].correctAnswer.length === value.length;
 
       if(conditionEach && conditionSize){
