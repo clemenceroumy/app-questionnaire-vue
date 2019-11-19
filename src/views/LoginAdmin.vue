@@ -67,6 +67,7 @@
     methods: {
       login(){
         db.get('admin').then(admin => {
+          //SAVE ADMIN TO LOCAL POUCHDB IF PASSWORD IS OK
           if(admin.password === this.password){
             db.put({
               _id: 'admin',

@@ -62,6 +62,7 @@ export default {
     }
   },
   created(){
+    //SET PASSWORD FOR ADMIN USER (WHEN APP IS LAUNCHED)
     db.put({
       _id: 'admin',
       password: 'admin'
@@ -69,6 +70,7 @@ export default {
   },
   methods: {
     login () {
+      //SAVE USER TO LOCAL POUCHDB
       db.put({
         _id: 'user',
         firstName: this.firstName,
