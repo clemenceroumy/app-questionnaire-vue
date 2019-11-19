@@ -14,7 +14,7 @@
             </v-card-text>
 
             <v-card-actions>
-              <v-btn dark color="#0ec4cf" @click="disconnect" class="mx-auto pa-5">Fin</v-btn>
+              <v-btn dark color="#0ec4cf" @click="disconnect" class="mx-auto pa-5">Envoyer votre résultat</v-btn>
             </v-card-actions>
           </v-card>
 
