@@ -1,6 +1,11 @@
 # app-questionnaire-vue
  Lien vers l'application : [App questionnaire](https://clever-mcnulty-ae4f6c.netlify.com/#/)
 
+## Test
+
+Pour tester le mode Admin :
+- entreprise: playmoweb
+- mot de passe : admin
 
 ## Planning
 
